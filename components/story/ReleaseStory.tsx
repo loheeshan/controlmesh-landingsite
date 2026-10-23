@@ -2,6 +2,8 @@
 
 import { PlayIcon } from "@/components/Icons";
 import { CommandMap } from "@/components/map/CommandMap";
+import { lensFor } from "@/lib/lens";
+import { RealLifeStrip } from "./RealLifeStrip";
 import { useReleaseStory } from "./useReleaseStory";
 
 /** Headline + live map. The tour state lives here so every part can follow it. */
@@ -42,6 +44,8 @@ export function ReleaseStory() {
         <span>Replay with the tracker</span>
         <span>Interactive demo · names, records and numbers are made up</span>
       </div>
+
+      <RealLifeStrip lens={lensFor(story.s.phase, story.s.step, story.s.sel)} touring={story.s.tour} />
     </>
   );
 }

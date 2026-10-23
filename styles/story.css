@@ -1,0 +1,45 @@
+@keyframes fly { 0% { left: 0; opacity: 0; } 12% { opacity: 1; } 85% { opacity: 1; } 100% { left: calc(100% - 16px); opacity: 0; } }
+
+.strip {
+  max-width: 1400px; margin: 0 auto;
+  padding: 28px var(--gutter) clamp(56px, 7vw, 96px);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.strip-head { display: flex; align-items: baseline; gap: 8px 14px; flex-wrap: wrap; font-size: 14px; }
+.strip-cards { display: flex; flex-wrap: wrap; gap: 14px; }
+
+.card {
+  flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 10px;
+  padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface);
+  transition: border-color 0.3s, background 0.3s;
+}
+.card-alert { border-color: var(--accent); background: #1e1814; }
+.card-ok { border-color: var(--safe); background: #131b22; }
+.card-h { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; }
+.num {
+  flex: none; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--accent); color: var(--bg); font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.card-stage { flex: 1 1 auto; min-height: 250px; display: flex; align-items: center; justify-content: center; }
+.card-cap { font-size: 14px; line-height: 1.5; color: var(--text-2); }
+.card-cap.muted { color: var(--muted); }
+.card-meaning { flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px; }
+.card-meaning strong { font-size: clamp(22px, 2.2vw, 28px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+.card-meaning p { font-size: 16px; color: var(--text-2); }
+
+.data { gap: 6px; color: #6a6058; transition: color 0.3s; }
+.data-open { color: var(--accent); }
+.data-closed { color: var(--safe); }
+.data-end { flex: none; width: 104px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+.data-end-sm { width: 80px; }
+.data-end span { font-size: 11px; color: var(--text-2); }
+.data-flow { position: relative; flex: 1 1 auto; height: 60px; min-width: 40px; }
+.data-line { position: absolute; left: 0; right: 0; top: 50%; border-top: 2px dashed currentColor; opacity: 0.6; }
+.fly-file { position: absolute; top: 50%; margin-top: -10px; animation: fly 2.4s linear infinite both; }
+.data-lock {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  display: flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px;
+  background: var(--safe-soft); border: 1px solid var(--safe); color: var(--safe-text);
+  font-size: 12px; font-weight: 700; white-space: nowrap;
+}
