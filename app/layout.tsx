@@ -7,6 +7,7 @@ import "@/styles/layout.css";
 import "@/styles/map.css";
 import "@/styles/phone.css";
 import "@/styles/story.css";
+import "@/styles/sections.css";
 
 export const metadata: Metadata = {
   title: "ControlMesh · Proof, not alerts",
