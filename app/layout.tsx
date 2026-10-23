@@ -3,6 +3,7 @@ import "@fontsource-variable/inter";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/700.css";
 import "@/styles/base.css";
+import "@/styles/layout.css";
 
 export const metadata: Metadata = {
   title: "ControlMesh · Proof, not alerts",
