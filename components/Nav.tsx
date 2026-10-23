@@ -2,11 +2,12 @@ import Link from "next/link";
 import { LogoMark } from "./Logo";
 
 const links = [
-  { href: "#map", label: "Live map" },
-  { href: "#how", label: "How it works" },
-  { href: "#teams", label: "For teams" },
-  { href: "#trust", label: "Security" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#map", label: "Live map" },
+  { href: "/#how", label: "How it works" },
+  { href: "/film", label: "Film" },
+  { href: "/#teams", label: "For teams" },
+  { href: "/#trust", label: "Security" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export function Nav() {
@@ -19,12 +20,12 @@ export function Nav() {
         </Link>
         <div className="nav-links">
           {links.map((l) => (
-            <a key={l.href} href={l.href}>
+            <Link key={l.href} href={l.href}>
               {l.label}
-            </a>
+            </Link>
           ))}
         </div>
-        <a href="#pilot" className="btn btn-primary btn-sm nav-cta">
+        <a href="/#pilot" className="btn btn-primary btn-sm nav-cta">
           Join the pilot
         </a>
       </nav>

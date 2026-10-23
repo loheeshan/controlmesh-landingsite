@@ -4,6 +4,7 @@ import { ReleaseStory } from "@/components/story/ReleaseStory";
 import { Engines } from "@/components/sections/Engines";
 import { Problem } from "@/components/sections/Problem";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { FilmTeaser } from "@/components/sections/FilmTeaser";
 import { Roles } from "@/components/sections/Roles";
 import { Compare } from "@/components/sections/Compare";
 import { Trust } from "@/components/sections/Trust";
@@ -20,6 +21,7 @@ export default function Home() {
         <Engines />
         <Problem />
         <HowItWorks />
+        <FilmTeaser />
         <Roles />
         <Compare />
         <Trust />
