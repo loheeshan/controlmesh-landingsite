@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FileIcon, MailIcon, ShieldIcon } from "@/components/Icons";
 import type { ReleaseStory } from "@/components/story/useReleaseStory";
 import { ATTACK_RELATED, OBJECTS, ROUTES, TOUR, ZONE_LABELS, type Tone } from "@/lib/story";
@@ -16,6 +16,23 @@ export function CommandMap({ story }: { story: ReleaseStory }) {
   const drag = useRef<DragStart | null>(null);
   const justDragged = useRef(false);
   const [dragging, setDragging] = useState(false);
+  const view = useRef<HTMLDivElement>(null);
+  const [fit, setFit] = useState(1);
+  const [liftY, setLiftY] = useState(0);
+
+  // Camera zoom levels are tuned for a ~1400px wide map; shrink them on smaller screens.
+  // On narrow screens the panel covers the lower half, so aim the camera higher up.
+  useEffect(() => {
+    const el = view.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect;
+      setFit(Math.min(1, Math.max(0.45, width / 1400)));
+      setLiftY(width <= 980 ? -height * 0.28 : 0);
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   const fixed = s.phase === "fixed";
   const beam = s.tour ? TOUR[s.step].beam : "";
@@ -50,11 +67,12 @@ export function CommandMap({ story }: { story: ReleaseStory }) {
     }
   };
 
-  const transform = `translate(${s.drag.x}px, ${s.drag.y}px) scale(${s.cam.s}) translate(${-s.cam.x}px, ${-s.cam.y}px)`;
+  const transform = `translate(${s.drag.x}px, ${s.drag.y + liftY}px) scale(${s.cam.s * fit}) translate(${-s.cam.x}px, ${-s.cam.y}px)`;
 
   return (
     <section id="map" aria-label="Interactive map of one release" className="map">
       <div
+        ref={view}
         className="map-view"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}

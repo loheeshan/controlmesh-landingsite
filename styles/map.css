@@ -252,7 +252,7 @@
 /* ---------- small screens ---------- */
 @media (max-width: 980px) {
   .hide-sm { display: none !important; }
-  .panel { left: 14px; right: 14px; width: auto; top: auto; bottom: 178px; max-height: 44%; }
+  .panel { left: 14px; right: 14px; width: auto; top: auto; bottom: 178px; max-height: 38%; padding: 14px; }
   .tracker { right: 14px; }
   .step span:last-child { display: none; }
 }

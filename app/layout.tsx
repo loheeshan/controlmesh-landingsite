@@ -9,10 +9,18 @@ import "@/styles/phone.css";
 import "@/styles/story.css";
 import "@/styles/sections.css";
 
+const description =
+  "ControlMesh scans your code, proves which flaws are really exploitable, shows which people and data they put at risk, and signs a record for every release.";
+
 export const metadata: Metadata = {
   title: "ControlMesh · Proof, not alerts",
-  description:
-    "ControlMesh scans your code, proves which flaws are really exploitable, shows which people and data they put at risk, and signs a record for every release.",
+  description,
+  openGraph: {
+    title: "ControlMesh · Proof, not alerts",
+    description,
+    type: "website",
+  },
+  twitter: { card: "summary", title: "ControlMesh · Proof, not alerts", description },
 };
 
 export const viewport: Viewport = {
