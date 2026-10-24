@@ -2,14 +2,14 @@
 @keyframes type { from { max-width: 0; } to { max-width: 6ch; } }
 
 .phone {
-  margin: 0 auto; border: 6px solid var(--line); border-radius: 24px;
-  background: var(--text); color: #1a1714; overflow: hidden;
+  margin: 0 auto; border: 6px solid var(--line-2); border-radius: 24px;
+  background: #f5efe6; color: #1a1714; overflow: hidden; /* MediBook's own app colours, same in every theme */
 }
 .phone-sm { width: 200px; border-radius: 22px; }
 .phone-md { width: 220px; }
 .phone-bar {
   display: flex; align-items: center; gap: 6px; padding: 10px 12px;
-  background: #1f3a4d; color: var(--text); font-weight: 800; font-size: 13px;
+  background: #1f3a4d; color: #f5efe6; font-weight: 800; font-size: 13px;
 }
 .phone-url {
   padding: 6px 10px; background: #e2dacf; font-size: 10px; color: #3a3530;
@@ -28,7 +28,7 @@
 }
 .phone-sm .phone-row { font-size: 11px; padding: 5px 7px; }
 .phone-row span { font-weight: 700; }
-.phone-warn { padding: 7px 10px; background: var(--accent); color: var(--bg); font-size: 10px; font-weight: 800; letter-spacing: 0.04em; }
+.phone-warn { padding: 7px 10px; background: var(--accent); color: #14110f; font-size: 10px; font-weight: 800; letter-spacing: 0.04em; }
 .phone-loading { gap: 10px; }
 .phone-skel {
   height: 12px; border-radius: 6px;

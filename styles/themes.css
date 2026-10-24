@@ -92,6 +92,119 @@
   --safe-bg: #102036;
 }
 
+/* ---------- Indigo Trust (light) · storyboard option ---------- */
+:root[data-theme="indigo"] {
+  --bg: #f7f7fb; --bg-2: #efeff6; --surface: #ffffff; --surface-2: #f3f3f9;
+  --surface-0: #fafafd; --surface-hi: #f1f1fa; --glass: rgba(255, 255, 255, 0.94);
+  --line: #e3e3ee; --line-2: #d3d3e2; --line-3: #b4b4c9; --line-soft: #ececf4; --chip: #ededf5;
+  --text: #14132b; --text-2: #3c3a58; --text-3: #4f4d6b; --muted: #5d5b78; --faint: #8a88a3;
+  --brand: #4f46e5; --brand-2: #4338ca; --brand-hi: #3730a3; --brand-soft: #e0e7ff; --brand-bg: #eef2ff; --brand-rgb: 79, 70, 229; --on-brand: #ffffff; --brand-hover: #4338ca;
+  --accent: #dc2626; --accent-2: #dc2626; --accent-hi: #b91c1c; --accent-soft: #fee2e2; --accent-bg: #fef2f2; --accent-rgb: 220, 38, 38;
+  --safe: #16a34a; --safe-text: #15803d; --safe-soft: #dcfce7; --safe-bg: #f0fdf4; --safe-rgb: 22, 163, 74;
+  --font-display: "Plus Jakarta Sans Variable", var(--font-sans); --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --w-ground: #ececf4; --w-grid: #e4e4ef; --w-park: #d1ece1; --w-lot: #f1f1f7; --w-road: #cacad7;
+  --w-dash: #ffffff; --w-plate: #ffffff; --w-plate-l: #b5b5c3; --w-plate-r: #cecedb; --w-plate-line: #cacad7;
+  --w-roof: #bab9c7; --w-wall-l: #8c8c9c; --w-wall-r: #a5a5b4; --w-roof-2: #cecedb; --w-wall2-l: #9898a8;
+  --w-wall2-r: #b1b1bf; --w-roof-3: #868596; --w-light-top: #ffffff; --w-light-r: #a9a9b7; --w-silo: #eeeef5;
+  --w-hosp-top: #ffffff; --w-hosp-r: #e9e9f1; --w-house2-r: #b5b5c3; --w-annex: #ffffff; --w-roof-a-f: #c2785f;
+  --w-roof-a-b: #a35f49; --w-roof-b-f: #4f96bd; --w-roof-b-b: #065c8f; --w-db: #2980af; --w-db-top: #74accb;
+  --w-db-side: #075484; --w-trunk: #8a6a50; --w-tree: #4e9a6a; --w-tree-hi: #65b27f; --w-win-cool: #8ebcd5;
+  --w-win-warm: #fcd34d; --w-dc: #0369a1; --w-glass: #0369a1; --w-cross: #0369a1; --w-nimal: #0369a1;
+  --w-brand-dark: #9b96ef; --w-brand-mid: #7169e9; --w-risk-dark: #e88486; --w-risk-mid: #e15051;
+}
+
+/* ---------- Emerald Assurance (light) · storyboard option ---------- */
+:root[data-theme="emerald"] {
+  --bg: #f4f7f5; --bg-2: #ebf1ed; --surface: #ffffff; --surface-2: #f1f5f2;
+  --surface-0: #f9fbfa; --surface-hi: #eef4f0; --glass: rgba(255, 255, 255, 0.94);
+  --line: #dce6df; --line-2: #c9d6cd; --line-3: #a9bcaf; --line-soft: #e6eee8; --chip: #e9f0eb;
+  --text: #10231b; --text-2: #2f4a3d; --text-3: #3e5a4c; --muted: #52695e; --faint: #84998d;
+  --brand: #047857; --brand-2: #047857; --brand-hi: #065f46; --brand-soft: #d1fae5; --brand-bg: #ecfdf5; --brand-rgb: 4, 120, 87; --on-brand: #ffffff; --brand-hover: #065f46;
+  --accent: #dc2626; --accent-2: #dc2626; --accent-hi: #b91c1c; --accent-soft: #fee2e2; --accent-bg: #fef2f2; --accent-rgb: 220, 38, 38;
+  --safe: #15803d; --safe-text: #166534; --safe-soft: #dcfce7; --safe-bg: #f0fdf4; --safe-rgb: 21, 128, 61;
+  --font-display: "Manrope Variable", var(--font-sans); --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --w-ground: #e7eee9; --w-grid: #dde7e0; --w-park: #cdedd9; --w-lot: #edf2ee; --w-road: #c4cfc7;
+  --w-dash: #ffffff; --w-plate: #ffffff; --w-plate-l: #afbbb4; --w-plate-r: #c8d2cb; --w-plate-line: #c4cfc7;
+  --w-roof: #b3bfb8; --w-wall-l: #86948d; --w-wall-r: #9faca4; --w-roof-2: #c8d2cb; --w-wall2-l: #93a098;
+  --w-wall2-r: #abb7b0; --w-roof-3: #808e87; --w-light-top: #ffffff; --w-light-r: #a3afa8; --w-silo: #eaf0ec;
+  --w-hosp-top: #ffffff; --w-hosp-r: #e3ebe5; --w-house2-r: #afbbb4; --w-annex: #ffffff; --w-roof-a-f: #c2785f;
+  --w-roof-a-b: #a35f49; --w-roof-b-f: #579f9a; --w-roof-b-b: #0f6a62; --w-db: #338b84; --w-db-top: #7bb4af;
+  --w-db-side: #0f6159; --w-trunk: #8a6a50; --w-tree: #4e9a6a; --w-tree-hi: #65b27f; --w-win-cool: #93c1be;
+  --w-win-warm: #fcd34d; --w-dc: #0f766e; --w-glass: #0f766e; --w-cross: #0f766e; --w-nimal: #0f766e;
+  --w-brand-dark: #70b19e; --w-brand-mid: #349177; --w-risk-dark: #e78483; --w-risk-mid: #e1504f;
+}
+
+/* ---------- Graphite Signal (dark) · storyboard option ---------- */
+:root[data-theme="graphite"] {
+  --bg: #0e0f11; --bg-2: #121316; --surface: #17191c; --surface-2: #1e2024;
+  --surface-0: #131417; --surface-hi: #1b1d21; --glass: rgba(23, 25, 28, 0.94);
+  --line: #26292e; --line-2: #32363c; --line-3: #464b53; --line-soft: #1c1e22; --chip: #22252a;
+  --text: #ecedee; --text-2: #c9cbce; --text-3: #a9acb1; --muted: #9a9ea5; --faint: #6b7078;
+  --brand: #f5a524; --brand-2: #f7b547; --brand-hi: #fbcb7a; --brand-soft: #2b2213; --brand-bg: #1e1a12; --brand-rgb: 245, 165, 36; --on-brand: #0e0f11; --brand-hover: #f7b547;
+  --accent: #ef4444; --accent-2: #f87171; --accent-hi: #fca5a5; --accent-soft: #2a1618; --accent-bg: #1f1517; --accent-rgb: 239, 68, 68;
+  --safe: #22c55e; --safe-text: #4ade80; --safe-soft: #102a1b; --safe-bg: #0f2017; --safe-rgb: 34, 197, 94;
+  --font-display: "Inter Tight Variable", var(--font-sans); --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --w-ground: #111215; --w-grid: #191b1e; --w-park: #13211b; --w-lot: #131417; --w-road: #202327;
+  --w-dash: #44464b; --w-plate: #151619; --w-plate-l: #090a0b; --w-plate-r: #0e0f11; --w-plate-line: #26292e;
+  --w-roof: #353739; --w-wall-l: #16181a; --w-wall-r: #242629; --w-roof-2: #46484a; --w-wall2-l: #202124;
+  --w-wall2-r: #2c2e31; --w-roof-3: #5b5d5f; --w-light-top: #d2d4d5; --w-light-r: #77787a; --w-silo: #a8a9ab;
+  --w-hosp-top: #dfe0e1; --w-hosp-r: #c6c7c8; --w-house2-r: #939496; --w-annex: #ecedee; --w-roof-a-f: #7a4e3a;
+  --w-roof-a-b: #5a3a2c; --w-roof-b-f: #385880; --w-roof-b-b: #2d435f; --w-db: #33527a; --w-db-top: #4778b4;
+  --w-db-side: #253952; --w-trunk: #3a3330; --w-tree: #2f6b4e; --w-tree-hi: #3f8461; --w-win-cool: #60a5fa;
+  --w-win-warm: #fbbf24; --w-dc: #60a5fa; --w-glass: #60a5fa; --w-cross: #60a5fa; --w-nimal: #60a5fa;
+  --w-brand-dark: #8d621b; --w-brand-mid: #c78720; --w-risk-dark: #8a2c2d; --w-risk-mid: #c2393a;
+}
+
+/* ---------- Deep Teal + Signal Lime (dark) · storyboard option ---------- */
+:root[data-theme="teal-lime"] {
+  --bg: #071a1d; --bg-2: #0a2125; --surface: #0e2a2e; --surface-2: #133539;
+  --surface-0: #0b2226; --surface-hi: #102e32; --glass: rgba(14, 42, 46, 0.94);
+  --line: #18403f; --line-2: #215250; --line-3: #2f6b68; --line-soft: #0f2a2d; --chip: #153b3d;
+  --text: #e7f5f2; --text-2: #c3dcd7; --text-3: #a5c3bd; --muted: #94b5ae; --faint: #5f837c;
+  --brand: #c6f432; --brand-2: #d4f76a; --brand-hi: #e3fa9c; --brand-soft: #243512; --brand-bg: #142a1c; --brand-rgb: 198, 244, 50; --on-brand: #071a1d; --brand-hover: #d4f76a;
+  --accent: #ef4444; --accent-2: #f87171; --accent-hi: #fca5a5; --accent-soft: #2e1a1e; --accent-bg: #22171b; --accent-rgb: 239, 68, 68;
+  --safe: #4ade80; --safe-text: #86efac; --safe-soft: #0f3325; --safe-bg: #0e2b22; --safe-rgb: 74, 222, 128;
+  --font-display: "Space Grotesk", var(--font-sans); --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --w-ground: #092023; --w-grid: #0f2b2c; --w-park: #0c2d29; --w-lot: #0b2326; --w-road: #143738;
+  --w-dash: #375b5a; --w-plate: #0c262a; --w-plate-l: #051113; --w-plate-r: #071a1d; --w-plate-line: #18403f;
+  --w-roof: #2c4649; --w-wall-l: #0d282b; --w-wall-r: #1b363a; --w-roof-2: #3e5759; --w-wall2-l: #173236;
+  --w-wall2-r: #243e42; --w-roof-3: #536b6d; --w-light-top: #cdddda; --w-light-r: #708586; --w-silo: #a2b4b3;
+  --w-hosp-top: #dae9e6; --w-hosp-r: #c0d0cf; --w-house2-r: #8ca0a0; --w-annex: #e7f5f2; --w-roof-a-f: #7a4e3a;
+  --w-roof-a-b: #5a3a2c; --w-roof-b-f: #1c766f; --w-roof-b-b: #175d5a; --w-db: #186e66; --w-db-top: #229c8e;
+  --w-db-side: #124e4a; --w-trunk: #3a3330; --w-tree: #2f6b4e; --w-tree-hi: #3f8461; --w-win-cool: #2dd4bf;
+  --w-win-warm: #fbbf24; --w-dc: #2dd4bf; --w-glass: #2dd4bf; --w-cross: #2dd4bf; --w-nimal: #2dd4bf;
+  --w-brand-dark: #709229; --w-brand-mid: #a0c82e; --w-risk-dark: #873132; --w-risk-mid: #c13c3c;
+}
+
+/* ---------- Violet Aurora (dark) · storyboard option ---------- */
+:root[data-theme="violet"] {
+  --bg: #0f0b1f; --bg-2: #140f28; --surface: #1a1433; --surface-2: #221b40;
+  --surface-0: #15102b; --surface-hi: #1e1739; --glass: rgba(26, 20, 51, 0.94);
+  --line: #2c2550; --line-2: #3a3163; --line-3: #4f4580; --line-soft: #1c1636; --chip: #251e45;
+  --text: #eeeafb; --text-2: #cfc8ea; --text-3: #b3abd4; --muted: #a39bc6; --faint: #6f6794;
+  --brand: #7c3aed; --brand-2: #a78bfa; --brand-hi: #c4b5fd; --brand-soft: #2a1d52; --brand-bg: #201845; --brand-rgb: 124, 58, 237; --on-brand: #ffffff; --brand-hover: #6d28d9;
+  --accent: #ef4444; --accent-2: #f87171; --accent-hi: #fca5a5; --accent-soft: #2d1529; --accent-bg: #22142b; --accent-rgb: 239, 68, 68;
+  --safe: #22c55e; --safe-text: #4ade80; --safe-soft: #102a24; --safe-bg: #0f2122; --safe-rgb: 34, 197, 94;
+  --font-display: "Sora Variable", var(--font-sans); --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --w-ground: #130e26; --w-grid: #1c1735; --w-park: #141e2b; --w-lot: #15102a; --w-road: #251e44;
+  --w-dash: #49436a; --w-plate: #17122e; --w-plate-l: #0a0714; --w-plate-r: #0f0b1f; --w-plate-line: #2c2550;
+  --w-roof: #38324f; --w-wall-l: #181330; --w-wall-r: #27213f; --w-roof-2: #49435f; --w-wall2-l: #221d3b;
+  --w-wall2-r: #2f2947; --w-roof-3: #5e5873; --w-light-top: #d5d0e3; --w-light-r: #79748d; --w-silo: #aaa6bb;
+  --w-hosp-top: #e1ddef; --w-hosp-r: #c8c3d7; --w-house2-r: #9590a7; --w-annex: #eeeafb; --w-roof-a-f: #7a4e3a;
+  --w-roof-a-b: #5a3a2c; --w-roof-b-f: #1e6a87; --w-roof-b-b: #1c4d6b; --w-db: #18657c; --w-db-top: #1c97b0;
+  --w-db-side: #144359; --w-trunk: #3a3330; --w-tree: #2f6b4e; --w-tree-hi: #3f8461; --w-win-cool: #22d3ee;
+  --w-win-warm: #fbbf24; --w-dc: #22d3ee; --w-glass: #22d3ee; --w-cross: #22d3ee; --w-nimal: #22d3ee;
+  --w-brand-dark: #4b2590; --w-brand-mid: #6631c4; --w-risk-dark: #8a2a33; --w-risk-mid: #c2393d;
+}
+
+/* ---------- light themes: softer shadows, light form controls ---------- */
+:root[data-theme="indigo"],
+:root[data-theme="emerald"] { color-scheme: light; }
+:root[data-theme="indigo"] :is(.glass, .window, .f-term, .tc-panel, .tc-tab, .tag, .chip-mover, .phone),
+:root[data-theme="emerald"] :is(.glass, .window, .f-term, .tc-panel, .tc-tab, .tag, .chip-mover, .phone) {
+  box-shadow: 0 10px 30px rgba(20, 19, 43, 0.1);
+}
+
 /* ---------- heading font override from the customiser ---------- */
 :root[data-font="inter"] { --font-display: var(--font-sans); }
 :root[data-font="grotesk"] { --font-display: "Space Grotesk", var(--font-sans); }

@@ -13,7 +13,7 @@
 
 .tc-panel {
   position: fixed; right: 52px; top: 50%; z-index: 61; transform: translateY(-50%);
-  width: 320px; max-width: calc(100vw - 72px); max-height: calc(100vh - 32px); overflow-y: auto;
+  width: 340px; max-width: calc(100vw - 72px); max-height: calc(100vh - 32px); overflow-y: auto;
   display: flex; flex-direction: column; gap: 14px; padding: 16px;
   border: 1px solid var(--line-2); border-radius: 16px; background: var(--glass);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55); backdrop-filter: blur(14px);
@@ -25,17 +25,21 @@
 .tc-x { width: 36px; height: 36px; border: 0; border-radius: 8px; background: transparent; color: var(--text-2); font-size: 22px; }
 .tc-x:hover { background: var(--chip); color: var(--text); }
 
-.tc-themes { display: flex; flex-direction: column; gap: 8px; }
+.tc-themes { display: flex; flex-direction: column; gap: 14px; }
+.tc-themes-group { display: flex; flex-direction: column; gap: 6px; }
 .tc-theme {
-  display: flex; flex-direction: column; gap: 6px; width: 100%; padding: 10px 12px; text-align: left;
+  display: flex; flex-direction: column; gap: 6px; width: 100%; padding: 9px 11px; text-align: left;
   border: 1px solid var(--line); border-radius: 12px; background: var(--surface-0); color: var(--text);
 }
 .tc-theme:hover { border-color: var(--line-3); }
 .tc-theme-on, .tc-theme-on:hover { border-color: var(--brand); background: var(--brand-bg); }
 .tc-swatches { display: flex; gap: 0; border-radius: 6px; overflow: hidden; height: 14px; border: 1px solid rgba(255, 255, 255, 0.12); }
 .tc-swatches i { flex: 1 1 0; }
-.tc-name { display: flex; align-items: center; gap: 8px; font-weight: 700; }
-.tc-name em { font-style: normal; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 999px; background: var(--safe-soft); color: var(--safe-text); }
+.tc-name { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; font-weight: 700; line-height: 1.3; }
+.tc-tags { flex: none; display: flex; gap: 4px; }
+.tc-tags em { font-style: normal; font-size: 10.5px; font-weight: 700; padding: 1px 7px; border-radius: 999px; background: var(--safe-soft); color: var(--safe-text); }
+.tc-tags .tc-mode { background: var(--chip); color: var(--text-2); }
+.tc-tags .tc-short { background: var(--brand-soft); color: var(--brand-hi); }
 .tc-note { font-size: 12px; line-height: 1.4; color: var(--muted); }
 
 .tc-group, .tc-foot { display: flex; flex-direction: column; gap: 8px; }

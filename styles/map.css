@@ -74,7 +74,7 @@
   position: absolute; padding: 0; border: 0; background: transparent; border-radius: 18px;
   outline: 3px solid transparent; outline-offset: 6px; transition: outline-color 0.2s, background 0.2s;
 }
-.hit:hover, .hit:focus-visible { outline-color: rgba(245, 239, 230, 0.35); }
+.hit:hover, .hit:focus-visible { outline-color: color-mix(in srgb, var(--text) 35%, transparent); }
 .hit-sel, .hit-sel:hover { outline-color: var(--brand); background: rgba(var(--brand-rgb), 0.07); }
 
 .mark {

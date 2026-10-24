@@ -97,23 +97,32 @@ export function ThemeCustomizer() {
           </div>
 
           <div role="radiogroup" aria-label="Theme" className="tc-themes">
-            {THEMES.map((t) => (
-              <button
-                key={t.id}
-                role="radio"
-                aria-checked={theme === t.id}
-                className={`tc-theme${theme === t.id ? " tc-theme-on" : ""}`}
-                onClick={() => apply(t.id, font)}
-              >
-                <span className="tc-swatches" aria-hidden="true">
-                  {t.swatches.map((c, i) => <i key={i} style={{ background: c }} />)}
-                </span>
-                <span className="tc-name">
-                  {t.name}
-                  {t.id === THEME_SETTINGS.defaultTheme && <em>live</em>}
-                </span>
-                <span className="tc-note">{t.note}</span>
-              </button>
+            {(["Current", "Storyboard options"] as const).map((group) => (
+              <div key={group} className="tc-themes-group">
+                <span className="tc-label">{group}</span>
+                {THEMES.filter((t) => t.group === group).map((t) => (
+                  <button
+                    key={t.id}
+                    role="radio"
+                    aria-checked={theme === t.id}
+                    className={`tc-theme${theme === t.id ? " tc-theme-on" : ""}`}
+                    onClick={() => apply(t.id, font)}
+                  >
+                    <span className="tc-swatches" aria-hidden="true">
+                      {t.swatches.map((c, i) => <i key={i} style={{ background: c }} />)}
+                    </span>
+                    <span className="tc-name">
+                      <span className="tc-name-text">{t.name}</span>
+                      <span className="tc-tags">
+                        <em className="tc-mode">{t.mode}</em>
+                        {t.shortlist && <em className="tc-short">Shortlist</em>}
+                        {t.id === THEME_SETTINGS.defaultTheme && <em>Live</em>}
+                      </span>
+                    </span>
+                    {theme === t.id && <span className="tc-note">{t.note}</span>}
+                  </button>
+                ))}
+              </div>
             ))}
           </div>
 
