@@ -1,9 +1,10 @@
 import type { PhoneView } from "@/components/story/PhoneMock";
 import { ATTACK_RELATED, type Phase, type Selection, type Tone } from "./story";
 
-type LensStage = "own" | "probe" | "traced" | "blocked" | "accepted" | "fixed";
+export type LensStage = "own" | "probe" | "traced" | "blocked" | "accepted" | "fixed";
 
 export type Lens = {
+  stage: LensStage;
   phone: PhoneView;
   phoneCaption: string;
   dataTone: "idle" | "open" | "closed";
@@ -45,6 +46,7 @@ export function lensFor(phase: Phase, step: number, sel: Selection): Lens {
   const [meaningTone, meaningTitle, meaningText] = MEANING[stage];
 
   return {
+    stage,
     phone: stage === "fixed" ? "fixed" : exposed ? "leak" : stage === "probe" ? "probe" : "own",
     phoneCaption: CAPTIONS[stage],
     dataTone: stage === "fixed" ? "closed" : exposed ? "open" : "idle",

@@ -120,7 +120,13 @@ export function useReleaseStory() {
     setS((p) => ({ ...p, ...stepState(6), phase: "accepted", tour: true }));
   }, []);
 
-  return { s, patch, startTour, focus, goSite, goStep, toggleTour, zoom, dragTo, applyFix, acceptRisk };
+  /** Jump straight to a tour step with a given outcome (used by the real-life strip). */
+  const jumpTo = useCallback((i: number, phase: Phase) => {
+    touched.current = true;
+    setS((p) => ({ ...p, ...stepState(i), phase, tour: false }));
+  }, []);
+
+  return { s, patch, jumpTo, startTour, focus, goSite, goStep, toggleTour, zoom, dragTo, applyFix, acceptRisk };
 }
 
 export type ReleaseStory = ReturnType<typeof useReleaseStory>;

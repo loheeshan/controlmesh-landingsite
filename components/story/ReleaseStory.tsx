@@ -45,7 +45,7 @@ export function ReleaseStory() {
         <span>Interactive demo · names, records and numbers are made up</span>
       </div>
 
-      <RealLifeStrip lens={lensFor(story.s.phase, story.s.step, story.s.sel)} touring={story.s.tour} />
+      <RealLifeStrip story={story} lens={lensFor(story.s.phase, story.s.step, story.s.sel)} />
     </>
   );
 }
