@@ -99,7 +99,7 @@
 /* ---------- film teaser ---------- */
 .film-poster { position: relative; display: block; aspect-ratio: 16 / 9; max-height: 560px; border-radius: 20px; overflow: hidden; border: 1px solid var(--line-2); background: var(--bg-2); color: var(--text); text-decoration: none; }
 .film-poster:hover { color: var(--text); border-color: var(--accent); }
-.film-poster svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.film-poster > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .film-play { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; font-size: clamp(18px, 2vw, 24px); font-weight: 700; }
 .film-button { width: 88px; height: 88px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; }
 
