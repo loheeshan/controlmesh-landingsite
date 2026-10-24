@@ -3,12 +3,12 @@
 import { useState } from "react";
 
 const ALERTS: [string, string, string, string][] = [
-  ["CRITICAL", "#FF8A47", "Possible SQL injection", "db/query.py:88"],
-  ["HIGH", "#FFB283", "Outdated package with known CVE", "package.json"],
-  ["HIGH", "#FFB283", "S3 bucket allows public read", "patient-scans"],
-  ["MEDIUM", "#D9D2CA", "Route may be missing an ownership check", "patients.py:41"],
-  ["MEDIUM", "#D9D2CA", "Possible secret in sample config", ".env.example"],
-  ["LOW", "#9A9087", "Base image has known CVEs", "Dockerfile"],
+  ["CRITICAL", "var(--accent-2)", "Possible SQL injection", "db/query.py:88"],
+  ["HIGH", "var(--accent-hi)", "Outdated package with known CVE", "package.json"],
+  ["HIGH", "var(--accent-hi)", "S3 bucket allows public read", "patient-scans"],
+  ["MEDIUM", "var(--text-2)", "Route may be missing an ownership check", "patients.py:41"],
+  ["MEDIUM", "var(--text-2)", "Possible secret in sample config", ".env.example"],
+  ["LOW", "var(--muted)", "Base image has known CVEs", "Dockerfile"],
 ];
 
 const POINTS: [string, string][] = [
@@ -87,9 +87,9 @@ export function Problem() {
               </div>
               <div className="chain rise" style={{ animationDelay: "0.2s" }}>
                 <span className="mono">patients.py:41</span>
-                <svg width="34" height="10" viewBox="0 0 34 10" aria-hidden="true"><path className="dash-line" d="M0 5 H34" stroke="#FF6B1A" strokeWidth="2" /></svg>
+                <svg width="34" height="10" viewBox="0 0 34 10" aria-hidden="true"><path className="dash-line" d="M0 5 H34" style={{ stroke: "var(--accent)" }} strokeWidth="2" /></svg>
                 <span className="mono">booking-api-role</span>
-                <svg width="34" height="10" viewBox="0 0 34 10" aria-hidden="true"><path className="dash-line" d="M0 5 H34" stroke="#FF6B1A" strokeWidth="2" /></svg>
+                <svg width="34" height="10" viewBox="0 0 34 10" aria-hidden="true"><path className="dash-line" d="M0 5 H34" style={{ stroke: "var(--accent)" }} strokeWidth="2" /></svg>
                 <span className="mono chain-hot">s3://patient-scans · public</span>
               </div>
               <div className="row-gap rise" style={{ animationDelay: "0.3s" }}>

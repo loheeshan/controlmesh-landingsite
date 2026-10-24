@@ -1,0 +1,59 @@
+/* Floating theme switcher (components/ThemeCustomizer.tsx). */
+.tc-tab {
+  position: fixed; right: 0; top: 50%; z-index: 60; transform: translateY(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  width: 40px; padding: 12px 0; border: 1px solid var(--line-2); border-right: 0;
+  border-radius: 12px 0 0 12px; background: var(--glass); color: var(--text-2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px);
+}
+.tc-tab:hover, .tc-tab-open { color: var(--text); border-color: var(--brand); }
+.tc-tab-dots { display: flex; flex-direction: column; gap: 4px; }
+.tc-tab-dots i { width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.25); }
+.tc-tab-label { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; }
+
+.tc-panel {
+  position: fixed; right: 52px; top: 50%; z-index: 61; transform: translateY(-50%);
+  width: 320px; max-width: calc(100vw - 72px); max-height: calc(100vh - 32px); overflow-y: auto;
+  display: flex; flex-direction: column; gap: 14px; padding: 16px;
+  border: 1px solid var(--line-2); border-radius: 16px; background: var(--glass);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55); backdrop-filter: blur(14px);
+  color: var(--text); font-size: 14px;
+}
+.tc-panel.rise { animation: none; }
+.tc-head { display: flex; align-items: center; justify-content: space-between; }
+.tc-head strong { font-family: var(--font-display); font-size: 16px; }
+.tc-x { width: 36px; height: 36px; border: 0; border-radius: 8px; background: transparent; color: var(--text-2); font-size: 22px; }
+.tc-x:hover { background: var(--chip); color: var(--text); }
+
+.tc-themes { display: flex; flex-direction: column; gap: 8px; }
+.tc-theme {
+  display: flex; flex-direction: column; gap: 6px; width: 100%; padding: 10px 12px; text-align: left;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--surface-0); color: var(--text);
+}
+.tc-theme:hover { border-color: var(--line-3); }
+.tc-theme-on, .tc-theme-on:hover { border-color: var(--brand); background: var(--brand-bg); }
+.tc-swatches { display: flex; gap: 0; border-radius: 6px; overflow: hidden; height: 14px; border: 1px solid rgba(255, 255, 255, 0.12); }
+.tc-swatches i { flex: 1 1 0; }
+.tc-name { display: flex; align-items: center; gap: 8px; font-weight: 700; }
+.tc-name em { font-style: normal; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 999px; background: var(--safe-soft); color: var(--safe-text); }
+.tc-note { font-size: 12px; line-height: 1.4; color: var(--muted); }
+
+.tc-group, .tc-foot { display: flex; flex-direction: column; gap: 8px; }
+.tc-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.tc-seg { display: flex; padding: 3px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--surface-0); }
+.tc-seg button { flex: 1 1 0; min-height: 36px; border: 0; border-radius: 7px; background: transparent; color: var(--text-2); font-size: 12px; font-weight: 600; }
+.tc-seg button.on { background: var(--brand); color: var(--on-brand); }
+
+.tc-foot { padding-top: 12px; border-top: 1px solid var(--line); }
+.tc-help { font-size: 12px; line-height: 1.45; color: var(--text-2); }
+.tc-help code, .tc-code code { font-family: var(--font-mono); font-size: 12px; color: var(--brand-hi); }
+.tc-code { display: flex; align-items: center; gap: 8px; padding: 6px 6px 6px 10px; border-radius: 8px; background: var(--surface-0); border: 1px solid var(--line); }
+.tc-code code { flex: 1 1 auto; min-width: 0; overflow-x: auto; white-space: nowrap; }
+.tc-code button { flex: none; min-height: 32px; padding: 0 10px; border: 1px solid var(--line-2); border-radius: 6px; background: transparent; color: var(--text); font-size: 12px; font-weight: 700; }
+.tc-reset { min-height: 40px; border: 1px solid var(--line-2); border-radius: 10px; background: transparent; color: var(--text); font-size: 13px; font-weight: 600; }
+.tc-reset:disabled { opacity: 0.45; cursor: default; }
+
+@media (max-width: 560px) {
+  .tc-tab { top: auto; bottom: 96px; transform: none; }
+  .tc-panel { left: 12px; right: 12px; top: auto; bottom: 12px; transform: none; width: auto; max-width: none; max-height: 78vh; }
+}

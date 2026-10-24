@@ -32,7 +32,7 @@ export function Trust() {
         <div className="trust-grid">
           {ITEMS.map((it) => (
             <div key={it.title} className="trust-card">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ color: "var(--brand)" }} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 {it.icon}
               </svg>
               <strong>{it.title}</strong>

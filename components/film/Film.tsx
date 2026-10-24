@@ -166,7 +166,7 @@ function Scene({ i }: { i: number }) {
                 <span className="f-wire-bottom mono hot f-rise" style={d(2.4)}>200 OK</span>
               </div>
               <div className="f-actor f-rise" style={d(0.2)}>
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#D9D2CA" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="1.5" /><rect x="4" y="14" width="16" height="6" rx="1.5" /><path d="M8 7h.01M8 17h.01" /></svg>
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ color: "var(--text-2)" }} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="1.5" /><rect x="4" y="14" width="16" height="6" rx="1.5" /><path d="M8 7h.01M8 17h.01" /></svg>
                 <strong>booking-api</strong>
                 <small className="mono">staging copy</small>
               </div>
@@ -212,7 +212,7 @@ function Scene({ i }: { i: number }) {
           <div className="f-stage f-col">
             <div className="f-row f-verdict">
               <div className="f-big f-dim" style={d(1.1)}><b>47</b><span>possible issues</span><i className="f-strike" style={d(1.1)} /></div>
-              <svg className="f-rise" style={d(1.3)} width="80" height="24" viewBox="0 0 80 24" aria-hidden="true"><path d="M0 12 H72 M62 3 L74 12 L62 21" stroke="#FF6B1A" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <svg className="f-rise" style={d(1.3)} width="80" height="24" viewBox="0 0 80 24" aria-hidden="true"><path d="M0 12 H72 M62 3 L74 12 L62 21" style={{ stroke: "var(--accent)" }} strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
               <div className="f-big f-pop" style={d(1.5)}><b className="hot">1</b><span>proven exploit</span></div>
             </div>
             <div className="f-stamp f-stamp-solid mono" style={d(2.4)}>RELEASE v2.4.0 · BLOCKED</div>

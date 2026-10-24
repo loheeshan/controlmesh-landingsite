@@ -23,7 +23,7 @@ export function Faq() {
             <div key={q} className="faq-item">
               <button className="faq-q" aria-expanded={open === i} onClick={() => setOpen(open === i ? -1 : i)}>
                 <span>{q}</span>
-                <span className={`faq-chev${open === i ? " faq-chev-open" : ""}`}><ChevronDown size={22} color="#FF6B1A" /></span>
+                <span className={`faq-chev${open === i ? " faq-chev-open" : ""}`}><ChevronDown size={22} color="var(--brand)" /></span>
               </button>
               {open === i && <p className="faq-a rise">{a}</p>}
             </div>

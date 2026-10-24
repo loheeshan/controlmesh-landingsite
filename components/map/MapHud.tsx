@@ -84,7 +84,7 @@ export function TopBar({ story }: { story: ReleaseStory }) {
               <strong>{site.name}</strong>
               <span>{site.sub}</span>
             </span>
-            <ChevronDown color="#9A9087" />
+            <ChevronDown color="var(--muted)" />
           </button>
           <button className="ctl ctl-sm" onClick={next} aria-label="Next place">
             <ChevronRight />
@@ -126,13 +126,13 @@ export function Kpis({ story }: { story: ReleaseStory }) {
     <div className="kpis hide-sm">
       <div className="glass kpi">
         <span className="kpi-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D9D2CA" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" /></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ color: "var(--text-2)" }} strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" /></svg>
         </span>
         <span className="kpi-text"><small>Findings on PR #482</small><strong>47</strong><small>46 ranked · 1 proven</small></span>
       </div>
       <div className={`glass kpi${fixed ? "" : " glow"}`}>
         <span className="kpi-icon kpi-icon-alert">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF8A47" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5" /><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6" /><path d="M17 8h4M19 6v4" /></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ color: "var(--accent-2)" }} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5" /><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6" /><path d="M17 8h4M19 6v4" /></svg>
         </span>
         <span className="kpi-text">
           <small>Patients at risk</small>
@@ -142,7 +142,7 @@ export function Kpis({ story }: { story: ReleaseStory }) {
       </div>
       <div className="glass kpi">
         <span className="kpi-icon kpi-icon-ok">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8EC5FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6" /></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ color: "var(--safe)" }} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6" /></svg>
         </span>
         <span className="kpi-text">
           <small>Release</small>
@@ -180,7 +180,7 @@ export function Tracker({ story }: { story: ReleaseStory }) {
     <div className="glass tracker">
       <div className="tracker-main">
         <div className="tracker-head">
-          <PackageIcon size={18} color="#FF6B1A" />
+          <PackageIcon size={18} color="var(--brand)" />
           <strong>Release tracking</strong>
           <span className="muted">{TOUR[s.step].note}</span>
           {awaiting && <span className="chip chip-alert glow">Waiting for your call</span>}
@@ -206,14 +206,14 @@ export function Tracker({ story }: { story: ReleaseStory }) {
       </div>
       <button className="pr-card hide-sm" onClick={() => focus("release")}>
         <span className="pr-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D9D2CA" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5" /><circle cx="6" cy="18" r="2.5" /><circle cx="18" cy="12" r="2.5" /><path d="M6 8.5v7M8.3 7.2l7.4 3.6" /></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" style={{ color: "var(--text-2)" }} strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5" /><circle cx="6" cy="18" r="2.5" /><circle cx="18" cy="12" r="2.5" /><path d="M6 8.5v7M8.3 7.2l7.4 3.6" /></svg>
         </span>
         <span className="pr-text">
           <strong>#482 Add patient records endpoint</strong>
           <span className={`chip chip-sm chip-${fixed ? "ok" : "alert"}`}>{fixed ? "Ship · signed" : accepted ? "Ship with 1 exception" : "Blocked"}</span>
           <small>{fixed ? "Re-tested · ready to ship" : accepted ? "Shipping with an exception" : "Waiting for a decision"}</small>
         </span>
-        <ChevronRight color="#9A9087" />
+        <ChevronRight color="var(--muted)" />
       </button>
     </div>
   );
@@ -241,7 +241,7 @@ export function ListTabs({ story }: { story: ReleaseStory }) {
               <small>{r.b}</small>
             </span>
             <span className={stTone(r.tone)}>{r.st}</span>
-            <ChevronRight size={14} color="#6A6058" />
+            <ChevronRight size={14} color="var(--faint)" />
           </button>
         ))}
       </div>

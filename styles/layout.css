@@ -1,8 +1,8 @@
 .nav {
   position: sticky; top: 0; z-index: 30;
-  background: rgba(15, 14, 13, 0.88);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #221f1c;
+  border-bottom: 1px solid var(--line-soft);
 }
 .nav-inner {
   max-width: 1400px; margin: 0 auto; padding: 0 var(--gutter);
@@ -10,7 +10,7 @@
 }
 .brand {
   display: flex; align-items: center; gap: 10px;
-  color: var(--text); text-decoration: none; font-weight: 800; font-size: 19px;
+  color: var(--text); text-decoration: none; font-family: var(--font-display); font-weight: 800; font-size: 19px;
 }
 .brand:hover { color: var(--text); }
 .brand-sm { font-size: 15px; font-weight: 700; }
@@ -31,7 +31,7 @@
 .hero-title { font-size: clamp(46px, 6.4vw, 90px); line-height: 0.96; font-weight: 800; letter-spacing: -0.04em; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 10px; }
 
-.footer { border-top: 1px solid #221f1c; }
+.footer { border-top: 1px solid var(--line-soft); }
 .footer-inner {
   max-width: 1200px; margin: 0 auto; padding: 32px var(--gutter);
   display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center;

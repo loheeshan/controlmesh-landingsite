@@ -1,20 +1,49 @@
 :root {
+  /* Ember (default). Other themes override these in styles/themes.css. */
   --bg: #0f0e0d;
   --bg-2: #121110;
   --surface: #171513;
   --surface-2: #1e1b18;
+  --surface-0: #151311;
+  --surface-hi: #1c1916;
+  --glass: rgba(23, 21, 19, 0.94);
   --line: #2e2a26;
   --line-2: #3a3530;
+  --line-3: #4a433c;
+  --line-soft: #221f1c;
+  --chip: #24211e;
   --text: #f5efe6;
   --text-2: #d9d2ca;
+  --text-3: #b8afa6;
   --muted: #9a9087;
+  --faint: #6a6058;
+
+  /* brand = actions, links, ControlMesh itself */
+  --brand: #ff6b1a;
+  --brand-2: #ff8a47;
+  --brand-hi: #ffb283;
+  --brand-soft: #2a1b12;
+  --brand-bg: #1e1814;
+  --brand-rgb: 255, 107, 26;
+  --on-brand: #0f0e0d;
+
+  /* risk = proven exploit, exposed data, blocked */
   --accent: #ff6b1a;
   --accent-2: #ff8a47;
+  --accent-hi: #ffb283;
   --accent-soft: #2a1b12;
+  --accent-bg: #1e1814;
+  --accent-rgb: 255, 107, 26;
+
+  /* safe = protected, fixed, read-only */
   --safe: #8ec5ff;
   --safe-text: #b9dcff;
   --safe-soft: #13202b;
+  --safe-bg: #131b22;
+  --safe-rgb: 142, 197, 255;
+
   --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
+  --font-display: var(--font-sans);
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --gutter: clamp(16px, 3vw, 32px);
 }
@@ -25,6 +54,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 
 body {
   margin: 0;
+  transition: background-color 0.3s;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
@@ -34,10 +64,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--accent-2); }
-a:hover { color: #ffb283; }
+a { color: var(--brand-2); }
+a:hover { color: var(--brand-hi); }
 button { font: inherit; cursor: pointer; }
-h1, h2, h3 { margin: 0; }
+h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 p { margin: 0; }
 
 .mono { font-family: var(--font-mono); }
@@ -51,7 +81,7 @@ p { margin: 0; }
   font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.16em;
-  color: var(--accent);
+  color: var(--brand);
   text-transform: uppercase;
 }
 
@@ -59,15 +89,15 @@ p { margin: 0; }
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   min-height: 48px; padding: 0 22px; border-radius: 999px;
   font-size: 15px; font-weight: 700; text-decoration: none;
-  border: 1px solid #4a433c; background: transparent; color: var(--text);
+  border: 1px solid var(--line-3); background: transparent; color: var(--text);
 }
 .btn:hover { border-color: var(--text); color: var(--text); }
-.btn-primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.btn-primary:hover { background: var(--accent-2); border-color: var(--accent-2); color: var(--bg); }
+.btn-primary { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+.btn-primary:hover { background: var(--brand-2); border-color: var(--brand-2); color: var(--on-brand); }
 .btn-sm { min-height: 44px; padding: 0 18px; font-size: 14px; }
 
 @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-@keyframes glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 26, 0); } 50% { box-shadow: 0 0 0 6px rgba(255, 107, 26, 0.2); } }
+@keyframes glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(var(--brand-rgb), 0); } 50% { box-shadow: 0 0 0 6px rgba(var(--brand-rgb), 0.2); } }
 @keyframes dash { to { stroke-dashoffset: -48; } }
 @keyframes pulse { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
 

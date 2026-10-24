@@ -25,13 +25,13 @@ export const CAMS: Record<CamId, Cam> = {
 };
 
 export const SITES: { id: SiteId; code: string; name: string; sub: string; color: string }[] = [
-  { id: "all", code: "ALL", name: "Whole city", sub: "7 places · 1 release", color: "#F5EFE6" },
+  { id: "all", code: "ALL", name: "Whole city", sub: "7 places · 1 release", color: "var(--text)" },
   { id: "homes", code: "HOME", name: "Patients' homes", sub: "Nimal and Kamala", color: "#F08F8F" },
-  { id: "hosp", code: "HOSP", name: "City Hospital", sub: "uploads scans", color: "#8EC5FF" },
-  { id: "office", code: "DEV", name: "MediBook office", sub: "PR #482 open", color: "#D9D2CA" },
-  { id: "stg", code: "STG", name: "Staging · test copy", sub: "2 test users", color: "#8EC5FF" },
-  { id: "dc", code: "AWS", name: "Data center", sub: "ap-south-1 · production", color: "#8EC5FF" },
-  { id: "cm", code: "CM", name: "ControlMesh", sub: "read-only", color: "#FF6B1A" },
+  { id: "hosp", code: "HOSP", name: "City Hospital", sub: "uploads scans", color: "var(--w-dc)" },
+  { id: "office", code: "DEV", name: "MediBook office", sub: "PR #482 open", color: "var(--text-2)" },
+  { id: "stg", code: "STG", name: "Staging · test copy", sub: "2 test users", color: "var(--w-dc)" },
+  { id: "dc", code: "AWS", name: "Data center", sub: "ap-south-1 · production", color: "var(--w-dc)" },
+  { id: "cm", code: "CM", name: "ControlMesh", sub: "read-only", color: "var(--brand)" },
 ];
 
 /** Clickable things on the map. bb = hit box [left, top, width, height]; x/y = label anchor. */
@@ -55,8 +55,8 @@ export const OBJECTS: { id: ObjId; zone: SiteId; tag: string; bb: [number, numbe
 export const ZONE_LABELS: { text: string; x: number; y: number; color?: string }[] = [
   { text: "MEDIBOOK OFFICE", x: 950, y: 374 },
   { text: "STAGING · TEST COPY", x: 1462, y: 630 },
-  { text: "CONTROLMESH · READ-ONLY", x: 454, y: 622, color: "#FF8A47" },
-  { text: "DATA CENTER · AWS", x: 1640, y: 1090, color: "#8EC5FF" },
+  { text: "CONTROLMESH · READ-ONLY", x: 454, y: 622, color: "var(--brand-2)" },
+  { text: "DATA CENTER · AWS", x: 1640, y: 1090, color: "var(--w-dc)" },
   { text: "PATIENTS' HOMES", x: 120, y: 900 },
   { text: "CITY HOSPITAL", x: 760, y: 1250 },
 ];
